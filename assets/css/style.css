@@ -164,9 +164,9 @@
   #hero-bg {
     position: absolute;
     inset: 0;
-    background: url('assets/images/hero.jpg') center/cover no-repeat;
+    background-image: url('../images/sec-01_recepcao.png');
     transform: scale(1.05);
-    transition: transform 2s ease;
+    /* transition: transform 1s ease; */
   }
 
   #hero-bg::after {
@@ -253,8 +253,13 @@
   @media (max-width: 576px) {
     .projeto-grid { grid-template-columns: 1fr; }
   }
-
-  .projeto-card {
+  /* .card-projeto{
+    aspect-ratio: 3 / 4;;
+  } */
+  .card-projeto p{
+    color: #868686;
+  }
+  .card-projeto {
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -268,9 +273,17 @@
     display: block;
   }
 
-  .projeto-card:hover img { transform: scale(1.06); }
+.projeto-card p {
+    background-color: rgba(0, 0, 0, .6);
+    padding: 10px;
+    color: white;
+    grid-column: 1;
+    grid-row: 2;
+    align-self: end;
+}
+  /* .projeto-card:hover img { transform: scale(1.06); } */
 
-  .projeto-overlay {
+  /* .projeto-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(to top, rgba(44,31,23,0.7), transparent);
@@ -279,9 +292,10 @@
     display: flex;
     align-items: flex-end;
     padding: 20px;
-  }
+  } */
 
-  .projeto-card:hover .projeto-overlay { opacity: 1; }
+
+  /* .projeto-card:hover .projeto-overlay { opacity: 1; } */
 
   .projeto-label {
     color: var(--branco);

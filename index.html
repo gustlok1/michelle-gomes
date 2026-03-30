@@ -19,10 +19,11 @@
   <meta property="og:image" content="assets/images/og-image.jpg">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="file:///C:/Users/Gustavo/Downloads/assets/images/favicon.png">
+  <link rel="icon" type="image/png" href="./assets/images/michelle-gomes.png">
 
   <!-- Style -->
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style-flip.css">
 
   <!-- Bootstrap 5 -->
   <link href="./index_files/bootstrap.min.css" rel="stylesheet">
@@ -31,8 +32,8 @@
   <link href="./index_files/css2" rel="stylesheet">
 
   <!-- Bootstrap Icons -->
-  <link href="./index_files/bootstrap-icons.min.css" rel="stylesheet">
-
+  <!-- <link href="./index_files/bootstrap-icons.min.css" rel="stylesheet"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
 
@@ -40,17 +41,17 @@
        NAVBAR
   ===================== -->
   <nav id="navbar" class="scrolled">
-    <a href="file:///C:/Users/Gustavo/Downloads/index.html#hero" class="navbar-logo">Michelle Gomes</a>
+    <a href="#hero" class="navbar-logo">Michelle Gomes</a>
     <button class="navbar-toggle" id="menu-toggle" aria-label="Menu">
       <i class="bi bi-list"></i>
     </button>
     <ul class="navbar-links" id="navbar-links">
-      <li><a href="file:///C:/Users/Gustavo/Downloads/index.html#projetos">Projetos</a></li>
-      <li><a href="file:///C:/Users/Gustavo/Downloads/index.html#sobre">Sobre</a></li>
-      <li><a href="file:///C:/Users/Gustavo/Downloads/index.html#servicos">Serviços</a></li>
-      <li><a href="file:///C:/Users/Gustavo/Downloads/index.html#metodologias">Metodologias</a></li>
-      <li><a href="file:///C:/Users/Gustavo/Downloads/index.html#depoimentos">Depoimentos</a></li>
-      <li><a href="file:///C:/Users/Gustavo/Downloads/index.html#faq">FAQ</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#metodologias">Metodologias</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#faq">FAQ</a></li>
     </ul>
   </nav>
 
@@ -66,7 +67,7 @@
         <em>do seu jeito.</em>
       </h1>
       <p class="hero-sub">Melhor para você.</p>
-      <a href="file:///C:/Users/Gustavo/Downloads/index.html#projetos" class="btn-outline-light-custom">Ver Projetos</a>
+      <a href="#projetos" class="btn-outline-light-custom">Ver Projetos</a>
     </div>
   </section>
 
@@ -81,30 +82,92 @@
         <div class="divider"></div>
       </div>
       <div class="projeto-grid">
-        <div class="projeto-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-          <img src="file:///C:/Users/Gustavo/Downloads/assets/images/projeto-1.jpg" alt="Projeto de interiores 1" loading="lazy">
-          <div class="projeto-overlay">
-            <span class="projeto-label">Sala de Estar</span>
+        <div class="card-projeto" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+          <div class="flip-container">
+            <div class="flipper">
+              <div class="front">
+                <img src="./assets/images/sec-02_flip01.png" alt="Imagem 1">
+              </div>
+              <div class="back">
+                <img src="./assets/images/sec-02_flip02.png" alt="Imagem 2">
+              </div>
+            </div>
           </div>
+          <p>Sala de Estar</p>
         </div>
-        <div class="projeto-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-          <img src="file:///C:/Users/Gustavo/Downloads/assets/images/projeto-2.jpg" alt="Projeto de interiores 2" loading="lazy">
+        <div class="card-projeto" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+          <div class="flip-container">
+            <div class="flipper">
+              <div class="front">
+                <img src="./assets/images/sec-02_flip01.png" alt="Imagem 1">
+              </div>
+              <div class="back">
+                <img src="./assets/images/sec-02_flip02.png" alt="Imagem 2">
+              </div>
+            </div>
+          </div>
+          <p>Sala de Estar</p>
+        </div>
+        <div class="card-projeto" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+          <div class="flip-container">
+            <div class="flipper">
+              <div class="front">
+                <img src="./assets/images/sec-02_flip01.png" alt="Imagem 1">
+              </div>
+              <div class="back">
+                <img src="./assets/images/sec-02_flip02.png" alt="Imagem 2">
+              </div>
+            </div>
+          </div>
+          <p>Sala de Estar</p>
+        </div>
+        <div class="card-projeto" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+          <div class="flip-container">
+            <div class="flipper">
+              <div class="front">
+                <img src="./assets/images/sec-02_flip01.png" alt="Imagem 1">
+              </div>
+              <div class="back">
+                <img src="./assets/images/sec-02_flip02.png" alt="Imagem 2">
+              </div>
+            </div>
+          </div>
+          <p>Sala de Estar</p>
+        </div>
+        <!-- <div class="projeto-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+          <div class="flip-container">
+            <div class="flipper">
+              <div class="front">
+                <img src="./assets/images/sec-02_flip01.png" alt="Imagem 1">
+              </div>
+              <div class="back">
+                <img src="./assets/images/sec-02_flip02.png" alt="Imagem 2">
+              </div>
+            </div>
+          </div>
+          <p>Sala de Estar</p>
+            <div class="projeto-overlay">
+            <span class="projeto-label">Sala de Estar</span>
+          </div> 
+        </div> -->
+        <!--<div class="projeto-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+          <img src="./assets/images/sec-02_flip02.png" alt="Projeto de interiores 2" loading="lazy">
           <div class="projeto-overlay">
             <span class="projeto-label">Cozinha Integrada</span>
           </div>
         </div>
         <div class="projeto-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-          <img src="file:///C:/Users/Gustavo/Downloads/assets/images/projeto-3.jpg" alt="Projeto de interiores 3" loading="lazy">
+          <img src="./assets/images/sec-02_flip03.png" alt="Projeto de interiores 3" loading="lazy">
           <div class="projeto-overlay">
             <span class="projeto-label">Home Office</span>
           </div>
         </div>
         <div class="projeto-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-          <img src="file:///C:/Users/Gustavo/Downloads/assets/images/projeto-4.jpg" alt="Projeto de interiores 4" loading="lazy">
+          <img src="./assets/images/sec-02_flip04.png" alt="Projeto de interiores 4" loading="lazy">
           <div class="projeto-overlay">
             <span class="projeto-label">Quarto Master</span>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
   </section>
@@ -116,7 +179,7 @@
     <div class="container-fluid px-4 px-md-5">
       <div class="row align-items-center g-0">
         <div class="col-md-5">
-          <img src="file:///C:/Users/Gustavo/Downloads/assets/images/michelle.jpg" alt="Michelle Gomes, Designer de Interiores" class="sobre-img" loading="lazy">
+          <img src="./assets/images/michelle-gomes.png" alt="Michelle Gomes, Designer de Interiores" class="sobre-img" loading="lazy">
         </div>
         <div class="col-md-7">
           <div class="sobre-content">
@@ -130,7 +193,7 @@
             <p>
               Trabalho com um olhar sensível para materiais, luz e composição, integrando referências estéticas ao cotidiano real de cada cliente.
             </p>
-            <a href="file:///C:/Users/Gustavo/Downloads/index.html#servicos" class="btn-marrom">Conheça meus serviços</a>
+            <a href="#servicos" class="btn-marrom">Conheça meus serviços</a>
           </div>
         </div>
       </div>
@@ -147,7 +210,7 @@
         <h2 class="section-title">Serviços</h2>
         <div class="divider"></div>
       </div>
-      <img src="file:///C:/Users/Gustavo/Downloads/assets/images/servicos-banner.jpg" alt="Serviços de design de interiores" class="servicos-hero" loading="lazy">
+      <img src="./assets/images/sec-03_paletas.png" alt="Serviços de design de interiores" class="servicos-hero" loading="lazy">
       <div class="row g-4">
         <div class="col-md-4">
           <div class="servico-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
@@ -254,7 +317,7 @@
         </div>
       </div>
       <div class="mt-4">
-        <a href="file:///C:/Users/Gustavo/Downloads/index.html#" class="btn-marrom">Fale comigo</a>
+        <a href="https://wa.me/5511957995135?text=Ol%C3%A1%2C%20Michelle!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os." class="btn-marrom">Fale comigo</a>
       </div>
     </div>
   </section>
@@ -265,7 +328,7 @@
   <section id="quote">
     <div class="row g-0">
       <div class="col-md-6">
-        <img src="file:///C:/Users/Gustavo/Downloads/assets/images/quote-ambiente.jpg" alt="Ambiente projetado por Michelle Gomes" class="quote-img" loading="lazy">
+        <img src="./assets/images/sec-04_integracao.png" alt="Ambiente projetado por Michelle Gomes" class="quote-img" loading="lazy">
       </div>
       <div class="col-md-6">
         <div class="quote-text-wrap">
@@ -395,7 +458,7 @@
     <div class="container-fluid px-4 px-md-5">
       <div class="row g-0 align-items-center">
         <div class="col-md-5">
-          <img src="file:///C:/Users/Gustavo/Downloads/assets/images/footer-foto.jpg" alt="Michelle Gomes" class="footer-img" loading="lazy">
+          <img src="./assets/images/sec-04_integracao.png" alt="Michelle Gomes" class="footer-img" loading="lazy">
         </div>
         <div class="col-md-7">
           <div class="footer-content">
@@ -407,9 +470,9 @@
             <p class="footer-role">Designer de Interiores</p>
             <div class="footer-social">
               <!-- SUBSTITUIR: links reais das redes sociais -->
-              <a href="file:///C:/Users/Gustavo/Downloads/index.html#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-              <a href="file:///C:/Users/Gustavo/Downloads/index.html#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
-              <a href="file:///C:/Users/Gustavo/Downloads/index.html#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.youtube.com" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.youtube.com" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+              <a href="https://www.youtube.com" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -424,7 +487,7 @@
        WHATSAPP FLUTUANTE
   ===================== -->
   <!-- SUBSTITUIR: número real do WhatsApp -->
-  <a id="whatsapp-float" href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Michelle!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os." target="_blank" rel="noopener" aria-label="Fale comigo no WhatsApp">
+  <a id="whatsapp-float" href="https://wa.me/5511957995135?text=Ol%C3%A1%2C%20Michelle!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os." target="_blank" rel="noopener" aria-label="Fale comigo no WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
 
@@ -486,6 +549,28 @@
       el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
       observer.observe(el);
     });
+
+
+  function isTouchDevice() {
+    return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+  }
+
+  if (isTouchDevice()) {
+    // 📱 Celular / tablet → usa clique
+    $('.flip-container').on('click', function () {
+      $(this).toggleClass('active');
+    });
+  } else {
+    // 🖥️ Desktop → usa hover
+    $('.flip-container').hover(
+      function () {
+        $(this).addClass('active');
+      },
+      function () {
+        $(this).removeClass('active');
+      }
+    );
+  }
   </script>
 
 
