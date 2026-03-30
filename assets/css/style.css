@@ -377,7 +377,7 @@
   ===================== */
   #metodologias { background: var(--bege); }
 
-  .metodo-block { margin-bottom: 48px; }
+  .metodo-block { margin-bottom: 28px; height: 100%; }
 
   .metodo-block h3 {
     font-size: 1.5rem;

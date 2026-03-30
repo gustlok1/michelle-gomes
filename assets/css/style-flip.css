@@ -20,6 +20,21 @@
   transform: rotateY(180deg);
 }
 
+.flip-container p{
+    padding: 5px;
+    color: white;
+    background-color:rgb(112 75 27 / 33%);;
+    position: relative;
+    z-index: 999;
+    bottom: 33px;
+}
+  @media (max-width: 576px) {
+    .flip-container p{
+        bottom: 70px;
+        font-size: 40px;
+    }
+  }
+
 .front, .back {
   position: absolute;
   width: 100%;
