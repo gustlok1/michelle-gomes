@@ -166,7 +166,7 @@
     inset: 0;
     background-image: url('../images/sec-01_recepcao.png');
     transform: scale(1.05);
-    /* transition: transform 1s ease; */
+    transition: transform 1s ease;
   }
 
   #hero-bg::after {
