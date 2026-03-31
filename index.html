@@ -15,7 +15,7 @@
   <meta property="og:title" content="Michelle Gomes | Designer de Interiores">
   <meta property="og:description" content="Identidade e Curadoria integrando suas memórias para compor o seu próximo lar.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.seudominio.com.br">
+  <meta property="og:url" content="https://www.mgomesinteriores.com.br">
   <meta property="og:image" content="assets/images/og-image.jpg">
 
   <!-- Favicon -->
@@ -86,10 +86,10 @@
           <div class="flip-container">
             <div class="flipper">
               <div class="front">
-                <img src="./assets/images/sec-01_antes04.jpeg" alt="Imagem 1">
+                <img src="./assets/images/sec-01_depois01.jpeg" alt="Imagem 1">
               </div>
               <div class="back">
-                <img src="./assets/images/sec-01_depois04.jpeg" alt="Imagem 2">
+                <img src="./assets/images/sec-01_antes01.jpeg" alt="Imagem 2">
               </div>
             </div>
             <p>Sala de Estar</p>
@@ -99,10 +99,10 @@
           <div class="flip-container">
             <div class="flipper">
               <div class="front">
-                <img src="./assets/images/sec-01_antes01.jpeg" alt="Imagem 1">
+                <img src="./assets/images/sec-01_depois02.jpeg" alt="Imagem 1">
               </div>
               <div class="back">
-                <img src="./assets/images/sec-01_depois01.jpeg" alt="Imagem 2">
+                <img src="./assets/images/sec-01_antes02.jpeg" alt="Imagem 2">
               </div>
             </div>
             <p>Banheiro</p>
@@ -112,10 +112,10 @@
           <div class="flip-container">
             <div class="flipper">
               <div class="front">
-                <img src="./assets/images/sec-01_antes02.jpeg" alt="Imagem 1">
+                <img src="./assets/images/sec-01_depois03.jpeg" alt="Imagem 2">
               </div>
               <div class="back">
-                <img src="./assets/images/sec-01_depois02.jpeg" alt="Imagem 2">
+                <img src="./assets/images/sec-01_antes03.jpeg" alt="Imagem 1">
               </div>
             </div>
             <p>Sala de Estar</p>
@@ -125,10 +125,10 @@
           <div class="flip-container">
             <div class="flipper">
               <div class="front">
-                <img src="./assets/images/sec-01_antes03.jpeg" alt="Imagem 1">
+                <img src="./assets/images/sec-01_depois04.jpeg" alt="Imagem 2">
               </div>
               <div class="back">
-                <img src="./assets/images/sec-01_depois03.jpeg" alt="Imagem 2">
+                <img src="./assets/images/sec-01_antes04.jpeg" alt="Imagem 1">
               </div>
             </div>
             <p>Cozinha</p>
@@ -223,8 +223,7 @@
             <span class="section-label">01</span>
             <h3>Projeto</h3>
             <p>
-              <!-- SUBSTITUIR: descrição do serviço Projeto -->
-              Desenvolvimento completo do seu ambiente, do conceito à execução. Inclui briefing, moodboard, planta humanizada, memorial descritivo e acompanhamento de obra.
+              Planejamento técnico e estético de um espaço, que contempla layout, fluxos de circulação, iluminação, materiais, mobiliário e detalhamentos necessários para garantir funcionalidade, identidade e a execução perfeita da sua obra.
             </p>
           </div>
         </div>
@@ -294,7 +293,7 @@
               </p>
             </div>
             <div class="metodo-item" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-              <strong>Acompanhamento e Entrega Final</strong>
+              <strong>Entrega do Projeto</strong>
               <p> 
                 Finalização apenas com sua confiança
                 100% no resultado. Você recebe toda a documentação
@@ -482,7 +481,7 @@
             <i class="bi bi-plus faq-icon"></i>
           </div>
           <div class="faq-answer">
-            Atendo presencialmente em [cidade] e online para todo o Brasil.
+            Atendo presencialmente em São Paulo e online para o Brasil e Exterior. (Possuo projetos internacionais)
           </div>
         </div>
         <div class="faq-item" style="opacity: 0; transform: translateY(24px); transition: opacity 0.6s, transform 0.6s;">
@@ -610,10 +609,20 @@
       '.projeto-card, .servico-card, .depo-card, .metodo-item, .faq-item'
     ).forEach(el => {
       el.style.opacity = '0';
-      el.style.transform = 'translateY(24px)';
-      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      el.style.transform = el.classList.contains('flipper') 
+        ? 'rotateY(90deg)' 
+        : 'translateY(24px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
       observer.observe(el);
     });
+    // document.querySelectorAll(
+    //   '.projeto-card, .servico-card, .depo-card, .metodo-item, .faq-item, .flipper'
+    // ).forEach(el => {
+    //   el.style.opacity = '0';
+    //   el.style.transform = 'translateY(24px)';
+    //   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    //   observer.observe(el);
+    // });
 
 
   function isTouchDevice() {
