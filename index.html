@@ -66,7 +66,7 @@
         O seu lar,<br>
         <em>do seu jeito.</em>
       </h1>
-      <p class="hero-sub">Melhor para você.</p>
+      <!-- <p class="hero-sub">Melhor para você.</p> -->
       <a href="#projetos" class="btn-outline-light-custom">Ver Projetos</a>
     </div>
   </section>
@@ -83,7 +83,7 @@
       </div>
       <div class="projeto-grid">
         <div class="card-projeto" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-          <div class="flip-container">
+          <div class="flip-container active">
             <div class="flipper">
               <div class="front">
                 <img src="./assets/images/sec-01_depois01.jpeg" alt="Imagem 1">
@@ -92,11 +92,11 @@
                 <img src="./assets/images/sec-01_antes01.jpeg" alt="Imagem 2">
               </div>
             </div>
-            <p>Banheiro</p>
+            <!-- <p>Banheiro</p> -->
           </div>
         </div>
         <div class="card-projeto" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-          <div class="flip-container">
+          <div class="flip-container active">
             <div class="flipper">
               <div class="front">
                 <img src="./assets/images/sec-01_depois02.jpeg" alt="Imagem 1">
@@ -105,11 +105,11 @@
                 <img src="./assets/images/sec-01_antes02.jpeg" alt="Imagem 2">
               </div>
             </div>
-            <p>Sala Integrada</p>
+            <!-- <p>Sala Integrada</p> -->
           </div>
         </div>
         <div class="card-projeto" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-          <div class="flip-container">
+          <div class="flip-container active">
             <div class="flipper">
               <div class="front">
                 <img src="./assets/images/sec-01_depois03.jpeg" alt="Imagem 2">
@@ -118,11 +118,11 @@
                 <img src="./assets/images/sec-01_antes03.jpeg" alt="Imagem 1">
               </div>
             </div>
-            <p>Cozinha</p>
+            <!-- <p>Cozinha</p> -->
           </div>
         </div>
         <div class="card-projeto" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-          <div class="flip-container">
+          <div class="flip-container active">
             <div class="flipper">
               <div class="front">
                 <img src="./assets/images/sec-01_depois04.jpeg" alt="Imagem 2">
@@ -131,9 +131,9 @@
                 <img src="./assets/images/sec-01_antes04.jpeg" alt="Imagem 1">
               </div>
             </div>
-            <p>
+            <!-- <p>
               Sala de Estar
-            </p>
+            </p> -->
           </div>
         </div>
         <!-- <div class="projeto-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
@@ -483,7 +483,7 @@
             <i class="bi bi-plus faq-icon"></i>
           </div>
           <div class="faq-answer">
-            Atendo presencialmente em São Paulo e online para o Brasil e Exterior. (Possuo projetos internacionais)
+            Atendo presencialmente em São Paulo e online para o Brasil e Exterior.
           </div>
         </div>
         <div class="faq-item" style="opacity: 0; transform: translateY(24px); transition: opacity 0.6s, transform 0.6s;">
@@ -617,36 +617,48 @@
       el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
       observer.observe(el);
     });
-    // document.querySelectorAll(
-    //   '.projeto-card, .servico-card, .depo-card, .metodo-item, .faq-item, .flipper'
-    // ).forEach(el => {
-    //   el.style.opacity = '0';
-    //   el.style.transform = 'translateY(24px)';
-    //   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    //   observer.observe(el);
-    // });
+    
+    // 1. Seleciona todos os elementos com a classe 'flipper'
+    const elements = document.querySelectorAll('.flip-container');
 
-
-  function isTouchDevice() {
-    return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-  }
-
-  if (isTouchDevice()) {
-    // 📱 Celular / tablet → usa clique
-    $('.flip-container').on('click', function () {
-      $(this).toggleClass('active');
+    // 2. Configura o Observer
+    const observerFlipper = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('active');
+                observerFlipper.unobserve(entry.target);
+            } 
+            // else {
+            //     entry.target.classList.remove('active');
+            //     observerFlipper.unobserve(entry.target);
+            // }
+        });
+    }, {
+        threshold: 0.8
     });
-  } else {
-    // 🖥️ Desktop → usa hover
-    $('.flip-container').hover(
-      function () {
-        $(this).addClass('active');
-      },
-      function () {
-        $(this).removeClass('active');
-      }
-    );
-  }
+
+    elements.forEach(el => observerFlipper.observe(el));
+
+    function isTouchDevice() {
+      return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+    }
+
+    if (isTouchDevice()) {
+      // 📱 Celular / tablet → usa clique
+      $('.flip-container').on('click', function () {
+        $(this).toggleClass('active');
+      });
+    } else {
+      // 🖥️ Desktop → usa hover
+      $('.flip-container').hover(
+        function () {
+          $(this).addClass('active');
+        },
+        function () {
+          $(this).removeClass('active');
+        }
+      );
+    }
   </script>
 
 

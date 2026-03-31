@@ -191,8 +191,9 @@
     font-size: 0.7rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.7);
+    color: rgb(255, 255, 255);
     margin-bottom: 12px;
+    font-weight: bolder;
   }
 
   .hero-title {
